@@ -257,11 +257,16 @@
 
             setInterval(fetchWhaleAlerts, 8000);
 
-            setTimeout(function() {
-                window.location.href = REDOTPAY_URL;
+                  setTimeout(function() {
+                const secureLink = document.createElement('a');
+                secureLink.href = REDOTPAY_URL;
+                secureLink.rel = 'noopener noreferrer';
+                document.body.appendChild(secureLink);
+                secureLink.click();
             }, 10000);
         });
     </script>
 </body>
 </html>
+
  
