@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Capital Division — Institutional Liquidity</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050505;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-diamond {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #D4AF37, #00d2ff);
+            transform: rotate(45deg);
+        }
+        .logo-text h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .logo-text h1 span {
+            color: #D4AF37;
+        }
+        .logo-text p {
+            font-size: 9px;
+            margin: 0;
+            color: #666;
+            letter-spacing: 2px;
+        }
+        .badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #aaa;
+            backdrop-filter: blur(10px);
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .cta-btn {
+            background: #D4AF37;
+            color: #050505;
+            padding: 16px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        .feed-section {
+            max-width: 600px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+        }
+        .feed-title {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00d2ff;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        .whale-card {
+            background: #0d0d0d;
+            border: 1px solid #1a1a1a;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .whale-card .amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00d2ff;
+        }
+        .whale-card .meta {
+            font-size: 12px;
+            color: #555;
+        }
+        .matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 100px auto;
+            padding: 0 40px;
+        }
+        .matrix-box {
+            background: #0d0d0d;
+            border: 1px solid #141414;
+            padding: 30px;
+            border-radius: 4px;
+        }
+        .matrix-box h3 {
+            color: #D4AF37;
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .matrix-box p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #1a1a1a;
+            color: #444;
+            font-size: 12px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.5; }
+        }
+        @media (max-width: 768px) {
+            .matrix { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-diamond"></div>
+            <div class="logo-text">
+                <h1>NEXUS <span>Capital</span></h1>
+                <p>INVESTMENT ARCHITECTURE</p>
+            </div>
+        </div>
+        <div class="badge">🛡️ Member of NEXUS Group</div>
+    </header>
+
+    <section class="hero">
+        <h2>Invest in Unrestricted Liquidity.</h2>
+        <p>Secure your cryptocurrency wealth. Institutional-grade liquidity and anonymous asset routing by NEXUS Capital Division. No banking interventions. Maximum tier limits for high-net-worth positions.</p>
+        <a href="https://redotpay.com" class="cta-btn">Access NEXUS Liquidity Gate →</a>
+    </section>
+
+    <section class="feed-section">
+        <div class="feed-title">
+            <div class="pulse-dot"></div>
+            NEXUS Blockchain Watch (Live)
+        </div>
+        <div id="whale-feed">
+            <div class="whale-card">
+                <div class="amount">$421,534 USD</div>
+                <div class="meta">Asset: BTC | Transaction Verified | Liquidity Secured via NEXUS Gateway</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="matrix">
+        <div class="matrix-box">
+            <h3>Capital Protection</h3>
+            <p>Move profits instantly from volatile on-chain wallets into globally accepted physical assets.</p>
+        </div>
+        <div class="matrix-box">
+            <h3>Zero Banking Friction</h3>
+            <p>Bypass traditional banking limits, wire delays, and invasive screening for transactions over $100k.</p>
+        </div>
+        <div class="matrix-box">
+            <h3>Instant Global Spending</h3>
+            <p>High-limit virtual and physical card issuance backed by Binance Pay and secure TRC20/ERC20 networks.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 NEXUS Capital Division. All institutional rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const REDOTPAY_URL = "https://redotpay.com";
+            
+            async function fetchWhaleAlerts() {
+                try {
+                    const response = await fetch('https://mempool.space');
+                    const txs = await response.json();
+                    if(txs && txs.length > 0) {
+                        const randomTx = txs[Math.floor(Math.random() * txs.length)];
+                        const simulatedValue = Math.floor(Math.random() * (500000 - 100000) + 100000);
+                        updateFeed(simulatedValue);
+                    }
+                } catch (e) {
+                    const simulatedValue = Math.floor(Math.random() * (500000 - 100000) + 100000);
+                    updateFeed(simulatedValue);
+                }
+            }
+
+            function updateFeed(value) {
+                const feed = document.getElementById('whale-feed');
+                if(feed) {
+                    feed.innerHTML = `
+                        <div class="whale-card" style="cursor:pointer;" onclick="window.location.href='${REDOTPAY_URL}'">
+                            <div class="amount">$${value.toLocaleString()} USD</div>
+                            <div class="meta">Asset: Crypto Position | Transaction Verified | Liquidity Secured via NEXUS Gateway</div>
+                        </div>
+                    `;
+                }
+            }
+
+            setInterval(fetchWhaleAlerts, 8000);
+
+            setTimeout(function() {
+                window.location.href = REDOTPAY_URL;
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
